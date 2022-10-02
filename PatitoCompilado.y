@@ -61,7 +61,7 @@ char *caracter;
 %%
 
 programa:
-    program id puntoYComa FUNCIONES MAIN parentesisInicial parentesisFinal VARS2 BLOQUE {cout<<"El codigo pudo ser leido correctamente."<<endl;};
+    program id puntoYComa VARS2 FUNCIONES MAIN parentesisInicial parentesisFinal VARS2 BLOQUE {cout<<"El codigo pudo ser leido correctamente."<<endl;};
 
 FUNCIONES:
     funcionSimple
@@ -134,7 +134,12 @@ expresionesAdicionales:
     | ;
 
 LECTURA:
-    READ VARIABLE puntoYComa;
+    READ parentesisInicial listaVariables parentesisFinal puntoYComa;
+listaVariables:
+    VARIABLE variablesAdicionales;
+variablesAdicionales:
+    coma listaVariables
+    |;
 
 CicloFor:
     FOR parentesisInicial id igualA HIPEREXPRESION UNTIL HIPEREXPRESION parentesisFinal BLOQUE;
@@ -158,7 +163,7 @@ bloqueCondicional:
     | ;
 
 LLAMADA:
-    id parentesisInicial listaHiperexpresiones parentesisFinal puntoYComa;
+    id parentesisInicial listaHiperexpresiones parentesisFinal;
 listaHiperexpresiones:
     HIPEREXPRESION hiperexpresionesAdicionales;
 hiperexpresionesAdicionales:
