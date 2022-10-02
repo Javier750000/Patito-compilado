@@ -1,0 +1,3 @@
+flex PatitoCompilado.l
+bison -d PatitoCompilado.y
+g++ PatitoCompilado.tab.c lex.yy.c -o PatitoCompilado
