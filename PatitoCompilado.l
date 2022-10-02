@@ -37,6 +37,9 @@ int numeroLinea = 1;
 "char" {return CHAR;}
 "void" {return VOID;}
 "return" {return RETURN;}
+"for" {return FOR;}
+"until" {return UNTIL;}
+"while" {return WHILE;}
 "main" {return MAIN;}
 "if" {return IF;}
 "else" {return ELSE;}

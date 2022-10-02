@@ -68,13 +68,16 @@
      CHAR = 284,
      VOID = 285,
      RETURN = 286,
-     MAIN = 287,
-     IF = 288,
-     ELSE = 289,
-     cte_i = 290,
-     cte_f = 291,
-     cte_string = 292,
-     id = 293
+     FOR = 287,
+     UNTIL = 288,
+     WHILE = 289,
+     MAIN = 290,
+     IF = 291,
+     ELSE = 292,
+     cte_i = 293,
+     cte_f = 294,
+     cte_string = 295,
+     id = 296
    };
 #endif
 
@@ -94,7 +97,7 @@ char *caracter;
 
 
 /* Line 1676 of yacc.c  */
-#line 98 "PatitoCompilado.tab.h"
+#line 101 "PatitoCompilado.tab.h"
 } YYSTYPE;
 # define YYSTYPE_IS_TRIVIAL 1
 # define yystype YYSTYPE /* obsolescent; will be withdrawn */

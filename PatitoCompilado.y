@@ -47,6 +47,9 @@ char *caracter;
 %token CHAR
 %token VOID
 %token RETURN
+%token FOR
+%token UNTIL
+%token WHILE
 %token MAIN
 %token IF
 %token ELSE
@@ -118,24 +121,8 @@ ESTATUTO:
     | ESCRITURA;
     | LECTURA;
     | LLAMADA;
-
-ASIGNACION:
-    id igualA HIPEREXPRESION puntoYComa;
-
-HIPEREXPRESION:
-    SUPEREXPRESION yO;
-yO:
-    y SUPEREXPRESION
-    | o SUPEREXPRESION
-    | ;
-
-SUPEREXPRESION:
-    EXP COMPARACIONES;
-COMPARACIONES:
-    mayorQue EXP
-    | menorQue EXP
-    | diferenteDe EXP
-    | ;
+    | CicloFor;
+    | CicloWhile;
 
 ESCRITURA:
     print parentesisInicial listaExpresiones parentesisFinal puntoYComa;
@@ -148,6 +135,12 @@ expresionesAdicionales:
 
 LECTURA:
     READ VARIABLE puntoYComa;
+
+CicloFor:
+    FOR parentesisInicial id igualA HIPEREXPRESION UNTIL HIPEREXPRESION parentesisFinal BLOQUE;
+
+CicloWhile:
+    WHILE parentesisInicial HIPEREXPRESION parentesisFinal BLOQUE;
 
 VARIABLE:
     id arrayVariable;
@@ -170,6 +163,24 @@ listaHiperexpresiones:
     HIPEREXPRESION hiperexpresionesAdicionales;
 hiperexpresionesAdicionales:
     coma listaHiperexpresiones
+    | ;
+
+ASIGNACION:
+    VARIABLE igualA HIPEREXPRESION puntoYComa;
+
+HIPEREXPRESION:
+    SUPEREXPRESION yO;
+yO:
+    y SUPEREXPRESION
+    | o SUPEREXPRESION
+    | ;
+
+SUPEREXPRESION:
+    EXP COMPARACIONES;
+COMPARACIONES:
+    mayorQue EXP
+    | menorQue EXP
+    | diferenteDe EXP
     | ;
 
 EXP:
