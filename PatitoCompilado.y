@@ -53,6 +53,11 @@ char *caracter;
 %token MAIN
 %token IF
 %token ELSE
+%token MEDIA
+%token MEDIANA
+%token MODA
+%token VARIANZA
+%token DESVIACION
 %token <entero> cte_i
 %token <flotante> cte_f
 %token <caracter> cte_string
@@ -173,6 +178,21 @@ hiperexpresionesAdicionales:
 ASIGNACION:
     VARIABLE igualA HIPEREXPRESION puntoYComa;
 
+funcMedia:
+    MEDIA parentesisInicial listaHiperexpresiones parentesisFinal;
+
+funcMediana:
+    MEDIANA parentesisInicial listaHiperexpresiones parentesisFinal;
+
+funcModa:
+    MODA parentesisInicial listaHiperexpresiones parentesisFinal;
+
+funcVarianza:
+    VARIANZA parentesisInicial listaHiperexpresiones parentesisFinal;
+
+funcDesviacion:
+    DESVIACION parentesisInicial listaHiperexpresiones parentesisFinal;
+
 HIPEREXPRESION:
     SUPEREXPRESION yO;
 yO:
@@ -207,6 +227,11 @@ FACTOR:
     | VAR_CTE
     | VARIABLE
     | LLAMADA;
+    | funcMedia;
+    | funcMediana;
+    | funcModa;
+    | funcVarianza;
+    | funcDesviacion;
 
 VAR_CTE:
     | cte_i

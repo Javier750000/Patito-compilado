@@ -27,6 +27,8 @@ var
    A[i+1] = A[i]*i;
    A[i+1] = hola(x, y)+a[x+z]-5;
    hola(x,y,z)
+   A=desviacion(B);
+   A=media(B)*4;
    while (i < x)
    {
    }

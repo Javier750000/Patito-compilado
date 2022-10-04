@@ -43,6 +43,11 @@ int numeroLinea = 1;
 "main" {return MAIN;}
 "if" {return IF;}
 "else" {return ELSE;}
+"media" {return MEDIA;}
+"mediana" {return MEDIANA;}
+"moda" {return MODA;}
+"varianza" {return VARIANZA;}
+"desviacion" {return DESVIACION;}
 [ \t\r] {;}
 [\n] {numeroLinea++; }
 [a-zA-Z](_?([a-zA-Z]|[0-9]))* {yylval.caracter = strdup(yytext); return id;}

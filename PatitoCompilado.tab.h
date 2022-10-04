@@ -74,10 +74,15 @@
      MAIN = 290,
      IF = 291,
      ELSE = 292,
-     cte_i = 293,
-     cte_f = 294,
-     cte_string = 295,
-     id = 296
+     MEDIA = 293,
+     MEDIANA = 294,
+     MODA = 295,
+     VARIANZA = 296,
+     DESVIACION = 297,
+     cte_i = 298,
+     cte_f = 299,
+     cte_string = 300,
+     id = 301
    };
 #endif
 
@@ -97,7 +102,7 @@ char *caracter;
 
 
 /* Line 1676 of yacc.c  */
-#line 101 "PatitoCompilado.tab.h"
+#line 106 "PatitoCompilado.tab.h"
 } YYSTYPE;
 # define YYSTYPE_IS_TRIVIAL 1
 # define yystype YYSTYPE /* obsolescent; will be withdrawn */
