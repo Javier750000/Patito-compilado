@@ -1,6 +1,7 @@
 %{
 #include <iostream>
 #include "TablaDeVariables.h"
+#include "CuboSemantico.h"
 using namespace std;
 
 extern "C" int yylex();
@@ -24,8 +25,11 @@ char *caracter;
 %token multiplicacion
 %token division
 %token menorQue
+%token menorIgualQue
 %token mayorQue
+%token mayorIgualQue
 %token igualA
+%token igualABooleano
 %token diferenteDe
 %token y
 %token o
@@ -96,11 +100,7 @@ VARS:
 listaVars:
     listaIDs dosPuntos TIPO puntoYComa varsAdicionales;
 listaIDs:
-    id 
-    %{
-        buscar();
-    %}
-    array comasAdicionales;
+    id array comasAdicionales;
 array:
      corcheteInicial cte_i corcheteFinal matrix
     | ;
@@ -209,7 +209,10 @@ SUPEREXPRESION:
     EXP COMPARACIONES;
 COMPARACIONES:
     mayorQue EXP
+    | mayorIgualQue EXP
     | menorQue EXP
+    | menorIgualQue EXP
+    | igualABooleano EXP
     | diferenteDe EXP
     | ;
 

@@ -44,45 +44,48 @@
      multiplicacion = 260,
      division = 261,
      menorQue = 262,
-     mayorQue = 263,
-     igualA = 264,
-     diferenteDe = 265,
-     y = 266,
-     o = 267,
-     parentesisInicial = 268,
-     parentesisFinal = 269,
-     llaveInicial = 270,
-     llaveFinal = 271,
-     corcheteInicial = 272,
-     corcheteFinal = 273,
-     coma = 274,
-     puntoYComa = 275,
-     dosPuntos = 276,
-     program = 277,
-     var = 278,
-     print = 279,
-     READ = 280,
-     func = 281,
-     INT = 282,
-     FLOAT = 283,
-     CHAR = 284,
-     VOID = 285,
-     RETURN = 286,
-     FOR = 287,
-     UNTIL = 288,
-     WHILE = 289,
-     MAIN = 290,
-     IF = 291,
-     ELSE = 292,
-     MEDIA = 293,
-     MEDIANA = 294,
-     MODA = 295,
-     VARIANZA = 296,
-     DESVIACION = 297,
-     cte_i = 298,
-     cte_f = 299,
-     cte_string = 300,
-     id = 301
+     menorIgualQue = 263,
+     mayorQue = 264,
+     mayorIgualQue = 265,
+     igualA = 266,
+     igualABooleano = 267,
+     diferenteDe = 268,
+     y = 269,
+     o = 270,
+     parentesisInicial = 271,
+     parentesisFinal = 272,
+     llaveInicial = 273,
+     llaveFinal = 274,
+     corcheteInicial = 275,
+     corcheteFinal = 276,
+     coma = 277,
+     puntoYComa = 278,
+     dosPuntos = 279,
+     program = 280,
+     var = 281,
+     print = 282,
+     READ = 283,
+     func = 284,
+     INT = 285,
+     FLOAT = 286,
+     CHAR = 287,
+     VOID = 288,
+     RETURN = 289,
+     FOR = 290,
+     UNTIL = 291,
+     WHILE = 292,
+     MAIN = 293,
+     IF = 294,
+     ELSE = 295,
+     MEDIA = 296,
+     MEDIANA = 297,
+     MODA = 298,
+     VARIANZA = 299,
+     DESVIACION = 300,
+     cte_i = 301,
+     cte_f = 302,
+     cte_string = 303,
+     id = 304
    };
 #endif
 
@@ -93,7 +96,7 @@ typedef union YYSTYPE
 {
 
 /* Line 1676 of yacc.c  */
-#line 14 "PatitoCompilado.y"
+#line 16 "PatitoCompilado.y"
 
 int entero;
 float flotante;
@@ -102,7 +105,7 @@ char *caracter;
 
 
 /* Line 1676 of yacc.c  */
-#line 106 "PatitoCompilado.tab.h"
+#line 109 "PatitoCompilado.tab.h"
 } YYSTYPE;
 # define YYSTYPE_IS_TRIVIAL 1
 # define yystype YYSTYPE /* obsolescent; will be withdrawn */

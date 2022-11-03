@@ -13,8 +13,11 @@ int numeroLinea = 1;
 "*" {return multiplicacion;}
 "/" {return division;}
 "<" {return menorQue;}
+"<=" {return menorIgualQue;}
 ">" {return mayorQue;}
+">=" {return mayorIgualQue;}
 "=" {return igualA;}
+"==" {return igualABooleano;}
 "<>" {return diferenteDe;}
 "&&" {return y;}
 "||" {return o;}

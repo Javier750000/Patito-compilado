@@ -4,12 +4,19 @@
 #include <map>
 using namespace std;
 
-void insertar(map<string, string> &tablaVariables, string id, string tipo)
+class TablaDeVariables
+{
+    public:
+        void insertar(map<string, string>&, string, string);
+        void buscar(map<string, string>, string);
+};
+
+void TablaDeVariables::insertar(map<string, string> &tablaVariables, string id, string tipo)
 {
     tablaVariables.insert(pair<string, string>(id, tipo));
 }
 
-void buscar(map<string, string> tablaVariables, string variableABuscar)
+void TablaDeVariables::buscar(map<string, string> tablaVariables, string variableABuscar)
 {
     if (tablaVariables.count(variableABuscar)>0)
     {
