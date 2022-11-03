@@ -1,5 +1,6 @@
 %{
 #include <iostream>
+#include "TablaDeVariables.h"
 using namespace std;
 
 extern "C" int yylex();
@@ -95,7 +96,11 @@ VARS:
 listaVars:
     listaIDs dosPuntos TIPO puntoYComa varsAdicionales;
 listaIDs:
-    id array comasAdicionales;
+    id 
+    %{
+        buscar();
+    %}
+    array comasAdicionales;
 array:
      corcheteInicial cte_i corcheteFinal matrix
     | ;
