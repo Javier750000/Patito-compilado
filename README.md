@@ -15,3 +15,6 @@ Después de algunos obstáculos al comienzo de la semana sobre mi futuro con res
 
 # Quinto avance (generación de código de funciones)
 En los tres días que han pasado desde que entregué el cuarto avance, no le he avanzado nada al proyecto y sigue igual que como lo dejé el viernes anterior. El fin de semana me enfoqué en realizar proyectos y tareas de las otras seis materias que estoy llevando y en las que me está yendo mucho mejor, por lo que he preferido no sacrificarlas por tratar de salvar esta materia. Estoy consciente de que voy sumamente atrasado y que ya es prácticamente un hecho que mi proyecto va a estar extremadamente incompleto, pero comoquiera he buscado uno que otro tiempo libre en los que pueda realizar avances, por más mínimos que sean. Dicho de otra manera, mi proyecto no contiene nada de generación de código de funciones.
+
+# Sexto avance (generación de código para tipos estructurados (arreglos) y ejecución de expresiones y estatutos condicionales)
+El proyecto sigue igual que el avance pasado y no tiene nada de nuevo.
